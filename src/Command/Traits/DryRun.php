@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Command\Traits;
+namespace araise\CoreBundle\Command\Traits;
 
 trait DryRun
 {

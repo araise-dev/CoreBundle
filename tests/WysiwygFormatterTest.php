@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\WysiwygFormatter;
+use araise\CoreBundle\Formatter\WysiwygFormatter;
 
 class WysiwygFormatterTest extends AbstractFormatterTest
 {

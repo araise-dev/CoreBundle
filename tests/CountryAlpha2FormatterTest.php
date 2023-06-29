@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\CountryAlpha2Formatter;
+use araise\CoreBundle\Formatter\CountryAlpha2Formatter;
 
 class CountryAlpha2FormatterTest extends AbstractFormatterTest
 {

@@ -27,7 +27,7 @@ declare(strict_types=1);
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace whatwedo\CoreBundle\Formatter;
+namespace araise\CoreBundle\Formatter;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Twig\Environment;

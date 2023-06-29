@@ -33,7 +33,8 @@ ecs:
 phpstan:
 	vendor/bin/phpstan --memory-limit=2G
 
-phpunit: ## PHP Unit
+## PHP Unit tests
+phpunit:
 	vendor/bin/simple-phpunit
 
 

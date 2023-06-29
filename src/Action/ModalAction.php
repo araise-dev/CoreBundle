@@ -27,7 +27,7 @@ declare(strict_types=1);
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace whatwedo\CoreBundle\Action;
+namespace araise\CoreBundle\Action;
 
 class ModalAction extends Action
 {

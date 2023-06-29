@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\EnumFormatter;
-use whatwedo\CoreBundle\Tests\App\Enum\TestEnum;
+use araise\CoreBundle\Formatter\EnumFormatter;
+use araise\CoreBundle\Tests\App\Enum\TestEnum;
 
 class EnumFormatterTest extends AbstractFormatterTest
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
+use araise\CoreBundle\whatwedoCoreBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
-use whatwedo\CoreBundle\whatwedoCoreBundle;
 use whatwedo\TwigBootstrapIcons\whatwedoTwigBootstrapIconsBundle;
 
 return [

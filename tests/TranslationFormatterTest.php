@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\TranslationFormatter;
+use araise\CoreBundle\Formatter\TranslationFormatter;
 
 class TranslationFormatterTest extends AbstractFormatterTest
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\DependencyInjection;
+namespace araise\CoreBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\InfoFormatter;
+use araise\CoreBundle\Formatter\InfoFormatter;
 
 class InfoFormatterTest extends AbstractFormatterTest
 {

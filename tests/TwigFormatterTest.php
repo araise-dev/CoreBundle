@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\TwigFormatter;
+use araise\CoreBundle\Formatter\TwigFormatter;
 
 class TwigFormatterTest extends AbstractFormatterTest
 {

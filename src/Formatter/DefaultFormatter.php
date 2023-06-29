@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Formatter;
+namespace araise\CoreBundle\Formatter;
 
 class DefaultFormatter extends AbstractFormatter
 {

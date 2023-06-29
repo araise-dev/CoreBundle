@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\EmailFormatter;
+use araise\CoreBundle\Formatter\EmailFormatter;
 
 class EmailFormatterTest extends AbstractFormatterTest
 {

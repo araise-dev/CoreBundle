@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\MoneyFormatter;
+use araise\CoreBundle\Formatter\MoneyFormatter;
 
 class MoneyFormatterTest extends AbstractFormatterTest
 {

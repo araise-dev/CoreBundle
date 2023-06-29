@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Formatter;
+namespace araise\CoreBundle\Formatter;
 
 use Symfony\Contracts\Translation\TranslatorInterface;
 

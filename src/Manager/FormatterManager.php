@@ -27,10 +27,10 @@ declare(strict_types=1);
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace whatwedo\CoreBundle\Manager;
+namespace araise\CoreBundle\Manager;
 
+use araise\CoreBundle\Formatter\FormatterInterface;
 use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
-use whatwedo\CoreBundle\Formatter\FormatterInterface;
 
 class FormatterManager
 {

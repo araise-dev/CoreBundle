@@ -27,7 +27,7 @@ declare(strict_types=1);
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace whatwedo\CoreBundle\Formatter;
+namespace araise\CoreBundle\Formatter;
 
 class PercentageFormatter extends AbstractFormatter
 {

@@ -1,9 +1,10 @@
 {
-    "name": "whatwedo/core-bundle",
+    "name": "araise/core-bundle",
     "type": "symfony-bundle",
-    "description": "Reusable components used by other bundles of whatwedo",
+    "description": "Reusable components used by other bundles of araise",
     "license": "MIT",
-    "homepage": "https://whatwedo.github.io/CoreBundle/#/",
+    "homepage": "https://araise.dev",
+    "minimum-stability": "stable",
     "keywords": [
         "symfony-ux"
     ],
@@ -39,24 +40,10 @@
     },
     "autoload": {
         "psr-4": {
-            "whatwedo\\CoreBundle\\": "src/",
-            "whatwedo\\CoreBundle\\Tests\\": "tests/"
+            "araise\\CoreBundle\\": "src/",
+            "araise\\CoreBundle\\Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "twbs/icons",
-                "version": "1.8.1",
-                "source": {
-                    "url": "https://github.com/twbs/icons",
-                    "type": "git",
-                    "reference": "tags/v1.8.1"
-                }
-            }
-        }
-    ],
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle\Tests;
+namespace araise\CoreBundle\Tests;
 
-use whatwedo\CoreBundle\Formatter\Nl2brFormatter;
+use araise\CoreBundle\Formatter\Nl2brFormatter;
 
 class Nl2brFormatterTest extends AbstractFormatterTest
 {

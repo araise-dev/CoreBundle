@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace whatwedo\CoreBundle;
+namespace araise\CoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
