@@ -6,5 +6,5 @@ services:
         autowire: true
         autoconfigure: true
 
-    whatwedo\CoreBundle\Manager\FormatterManager:
+    araise\CoreBundle\Manager\FormatterManager:
         public: true

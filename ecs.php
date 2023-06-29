@@ -22,8 +22,8 @@ return static function (ECSConfig $containerConfigurator): void {
         ClassCommentSniff::class,
         FunctionCommentThrowTagSniff::class,
         ValidClassNameSniff::class => [
-            __DIR__ . '/src/whatwedoCoreBundle.php',
-            __DIR__ . '/src/DependencyInjection/whatwedoCoreExtension.php',
+            __DIR__ . '/src/araiseCoreBundle.php',
+            __DIR__ . '/src/DependencyInjection/araiseCoreExtension.php',
         ],
     ]);
 

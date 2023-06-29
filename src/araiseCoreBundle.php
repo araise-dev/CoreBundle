@@ -6,6 +6,6 @@ namespace araise\CoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class whatwedoCoreBundle extends Bundle
+class araiseCoreBundle extends Bundle
 {
 }

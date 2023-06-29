@@ -10,6 +10,6 @@ class InfoFormatter extends TwigFormatter
 {
     protected function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setDefault(self::OPT_TEMPLATE, '@whatwedoCore/formatter/info.html.twig');
+        $resolver->setDefault(self::OPT_TEMPLATE, '@araiseCore/formatter/info.html.twig');
     }
 }

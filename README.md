@@ -1,13 +1,12 @@
-[![Latest Stable Version](https://poser.pugx.org/whatwedo/core-bundle/v/stable)](https://packagist.org/packages/whatwedo/core-bundle)
-[![SymfonyInsight](https://insight.symfony.com/projects/6fad4e21-6a58-4f3f-ac3b-2108f54261ea/mini.svg)](https://insight.symfony.com/projects/6fad4e21-6a58-4f3f-ac3b-2108f54261ea)
+[![Latest Stable Version](https://poser.pugx.org/araise/core-bundle/v/stable)](https://packagist.org/packages/araise/core-bundle)
 
-# whatwedoCoreBundle
+# araiseCoreBundle
 
 This bundle is part of the [araise.dev](https://araise.dev) framework.
 
 ## Documentation
 
-[whatwedo.github.io/CoreBundle](https://whatwedo.github.io/CoreBundle/#/)
+[araise-dev.github.io/CoreBundle](https://araise-dev.github.io/CoreBundle/#/)
 
 ## License
 

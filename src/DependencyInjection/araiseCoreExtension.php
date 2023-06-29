@@ -14,7 +14,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * @see http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class whatwedoCoreExtension extends Extension
+class araiseCoreExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container): void
     {

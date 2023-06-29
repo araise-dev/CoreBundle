@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Formatter;
 
 use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
 
-#[Autoconfigure(tags: ['whatwedo_core.formatter'])]
+#[Autoconfigure(tags: ['araise_core.formatter'])]
 interface FormatterInterface
 {
     public function getString(mixed $value): string;

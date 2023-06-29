@@ -40,9 +40,9 @@ class PostAction extends Action
     ) {
         if (! array_key_exists(self::OPT_CONFIRMATION, $options)) {
             $options[self::OPT_CONFIRMATION] = [
-                self::OPT_CONFIRMATION_LABEL => 'whatwedo_core.actions.post.confirm',
-                self::OPT_CONFIRMATION_YES => 'whatwedo_core.actions.post.yes',
-                self::OPT_CONFIRMATION_NO => 'whatwedo_core.actions.post.no',
+                self::OPT_CONFIRMATION_LABEL => 'araise_core.actions.post.confirm',
+                self::OPT_CONFIRMATION_YES => 'araise_core.actions.post.yes',
+                self::OPT_CONFIRMATION_NO => 'araise_core.actions.post.no',
             ];
         }
         parent::__construct($this->acronym, $options);

@@ -16,7 +16,7 @@ class BooleanFormatter extends AbstractFormatter
 
     public function getString(mixed $value): string
     {
-        $msg = $value ? 'whatwedo_core.yes' : 'whatwedo_core.no';
+        $msg = $value ? 'araise_core.yes' : 'araise_core.no';
 
         return $this->translator->trans($msg);
     }

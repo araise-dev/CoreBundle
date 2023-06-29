@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use araise\CoreBundle\whatwedoCoreBundle;
+use araise\CoreBundle\araiseCoreBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -18,7 +18,7 @@ return [
     TwigBundle::class => [
         'all' => true,
     ],
-    whatwedoCoreBundle::class => [
+    araiseCoreBundle::class => [
         'all' => true,
     ],
     whatwedoTwigBootstrapIconsBundle::class => [
