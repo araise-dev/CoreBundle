@@ -1,0 +1,9 @@
+araise_core:
+    yes: Yes
+    no: No
+    send_email: Send Email
+    actions:
+        post:
+            confirm: Are you sure?
+            yes: Yes
+            no: No
