@@ -290,6 +290,21 @@ input[type="date"] {
         border-radius: 12px;
         padding: 1px 7px;
     }
+
+    .fc-view-harness {
+        @apply bg-white;
+    }
+
+    .fc-scrollgrid colgroup > col {
+        @apply bg-neutral-200;
+        width: 90px !important;
+    }
+
+    .fc-timegrid-slot,
+    .fc-timegrid-axis-cushion {
+        @apply font-semibold;
+        max-width: 90px;
+    }
 }
 
 // render empty tomcat '---'
