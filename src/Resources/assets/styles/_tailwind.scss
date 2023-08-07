@@ -305,6 +305,12 @@ input[type="date"] {
         @apply font-semibold;
         max-width: 90px;
     }
+
+    // eventColor attribute in fullCalendar settings or eventBackgroundColor custom property would be recommended
+    // But sadly it's not working, so we force it here with the Tailwind color palette
+    .fc-event {
+        @apply bg-primary-500 border-primary-500 #{!important};
+    }
 }
 
 // render empty tomcat '---'
