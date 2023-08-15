@@ -13,4 +13,11 @@ class DefaultFormatterTest extends AbstractFormatterTest
         $formatter = $this->getFormatter(DefaultFormatter::class);
         self::assertSame('test', $formatter->getHtml('test'));
     }
+
+    public function testEntityWithNoToString(): void
+    {
+        $formatter = $this->getFormatter(DefaultFormatter::class);
+        $entity = new EntityWithNoToString('test');
+        self::assertSame('\\'.EntityWithNoToString::class, $formatter->getHtml($entity));
+    }
 }

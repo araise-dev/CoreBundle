@@ -7,6 +7,7 @@
         role: 'menuitem',
         tabindex: '-1',
     }|merge(action.option('attr')|default([])) %}
+    {% set actionLabel = action.option('label')|trans %}
     {% if action.hasConfirmation() %}
         <div
             {{ stimulus_controller('araise/core-bundle/dropdown') }}
@@ -18,10 +19,10 @@
             >
                 {% if action.option('icon') %}
                     {{ bootstrap_icon(action.option('icon'), {
-                        class: 'inline mr-2 h-4 w-4'
+                        class: 'inline h-4 w-4'~(not actionLabel is empty ? ' mr-2' : '')
                     }) }}
                 {% endif %}
-                <span class="2xl:block">{{ action.option('label')|trans }}</span>
+                <span class="2xl:block">{{ actionLabel }}</span>
             </button>
 
             <div
@@ -61,10 +62,10 @@
         <a {{ attr|map((value, attr) => "#{attr}=\"#{value}\"")|join(' ')|raw }}>
             {% if action.option('icon') %}
                 {{ bootstrap_icon(action.option('icon'), {
-                    class: 'inline mr-2 h-4 w-4'
+                    class: 'inline h-4 w-4'~(not actionLabel is empty ? ' mr-2' : '')
                 }) }}
             {% endif %}
-            <span class="2xl:block">{{ action.option('label')|trans }}</span>
+            <span class="2xl:block">{{ actionLabel }}</span>
         </a>
     {% endif %}
 {% endblock %}
@@ -78,6 +79,7 @@
         tabindex: '-1',
         type: 'submit',
     }|merge(action.option('attr')|default([])) %}
+    {% set actionLabel = action.option('label')|trans %}
     {% if action.hasConfirmation() %}
         <div
             {{ stimulus_controller('araise/core-bundle/dropdown') }}
@@ -89,10 +91,10 @@
             >
                 {% if action.option('icon') %}
                     {{ bootstrap_icon(action.option('icon'), {
-                        class: 'inline mr-2 h-4 w-4'
+                        class: 'inline h-4 w-4'~(not actionLabel is empty ? ' mr-2' : '')
                     }) }}
                 {% endif %}
-                <span class="2xl:block">{{ action.option('label')|trans }}</span>
+                <span class="2xl:block">{{ actionLabel }}</span>
             </button>
 
             <div
@@ -140,10 +142,10 @@
                 >
                     {% if action.option('icon') %}
                         {{ bootstrap_icon(action.option('icon'), {
-                            class: 'inline mr-2 h-4 w-4'
+                            class: 'inline h-4 w-4'~(not actionLabel is empty ? ' mr-2' : '')
                         }) }}
                     {% endif %}
-                    <span class="2xl:block">{{ action.option('label')|trans }}</span>
+                    <span class="2xl:block">{{ actionLabel }}</span>
                 </button>
             </form>
         </div>

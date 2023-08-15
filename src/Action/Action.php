@@ -149,6 +149,14 @@ class Action
         return $this->options[$name];
     }
 
+    /**
+     * @return mixed[]
+     */
+    public function getOptions(): array
+    {
+        return $this->options;
+    }
+
     public function setOption(string $name, mixed $value): static
     {
         if (! $this->hasOption($name)) {

@@ -290,6 +290,27 @@ input[type="date"] {
         border-radius: 12px;
         padding: 1px 7px;
     }
+
+    .fc-view-harness {
+        @apply bg-white;
+    }
+
+    .fc-scrollgrid colgroup > col {
+        @apply bg-neutral-200;
+        width: 90px !important;
+    }
+
+    .fc-timegrid-slot,
+    .fc-timegrid-axis-cushion {
+        @apply font-semibold;
+        max-width: 90px;
+    }
+
+    // eventColor attribute in fullCalendar settings or eventBackgroundColor custom property would be recommended
+    // But sadly it's not working, so we force it here with the Tailwind color palette
+    .fc-event {
+        @apply bg-primary-500 border-primary-500 #{!important};
+    }
 }
 
 // render empty tomcat '---'
