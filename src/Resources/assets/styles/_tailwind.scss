@@ -251,6 +251,10 @@ input[type="date"] {
     --fc-more-link-bg-color: theme('colors.neutral.300');
     --fc-today-bg-color: theme('colors.primary.100');
 
+    &.fc table {
+        @apply text-base;
+    }
+
     .fc-button.fc-button-primary {
         @extend .whatwedo-crud-button--action-neutral;
         @apply mx-2;
@@ -280,8 +284,22 @@ input[type="date"] {
         @apply bg-neutral-200 text-neutral-500;
     }
 
-    .fc-daygrid-day,
-    .fc-day-past {
+    // Bug: Both lines have the same class and the year list returns days as well
+    .fc-timeline-header-row ~ .fc-timeline-header-row,
+    .fc-timeline-body {
+        .fc-timeline-slot.fc-day-sat,
+        .fc-timeline-slot.fc-day-sun {
+            @apply bg-neutral-400;
+
+            &.fc-day-future,
+            &.fc-day-today {
+                @apply bg-neutral-200;
+            }
+        }
+    }
+
+    .fc-daygrid-day .fc-day-past,
+    .fc-day-future, .fc-day-today {
         @apply bg-white text-neutral-700;
     }
 
