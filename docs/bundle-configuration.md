@@ -6,9 +6,8 @@ For the standalone usage of the CoreBundle, you can configure this bundle via a 
 araise_core:
 ```
 
-ℹ️ Note: If you are using another bundle of ours that requires the CoreBundle (for example [CrudBundle](https://crud.docs.araise.dev/#/bundle-configuration) or [TableBundle](https://table.docs.araise.dev/#/bundle-configuration)), you may either not need to configure these options or you can override them in the config files of those bundles. 
+ℹ️ Note: If you are using another bundle of ours that requires the CoreBundle (for example [CrudBundle](https://crud.docs.araise.dev/#/bundle-configuration) or [TableBundle](https://table.docs.araise.dev/#/bundle-configuration)), a change in the config of the CoreBundle will also affect the TableBundle and the CrudBundle (if they don't have a configuration). 
 For more infos, consult their documentation.
-
 
 ## Configuration Options
 Under the `araise_core` key you can use any of the following options:

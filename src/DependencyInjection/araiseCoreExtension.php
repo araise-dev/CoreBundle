@@ -20,6 +20,8 @@ class araiseCoreExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter('araise_core.enable_turbo', $config['enable_turbo']);
         $container->setParameter('araise.enable_turbo', $config['enable_turbo']);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
