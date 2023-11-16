@@ -7,7 +7,7 @@ namespace araise\CoreBundle\Twig;
 use Twig\Extension\AbstractExtension;
 use Twig\Extension\GlobalsInterface;
 
-class TurboExtension extends AbstractExtension implements GlobalsInterface
+class CoreTurboExtension extends AbstractExtension implements GlobalsInterface
 {
     public function __construct(
         protected bool $turboEnabled
@@ -17,7 +17,7 @@ class TurboExtension extends AbstractExtension implements GlobalsInterface
     public function getGlobals(): array
     {
         return [
-            'araise_turbo_enabled' => $this->turboEnabled,
+            'araise_core_turbo_enabled' => $this->turboEnabled,
         ];
     }
 }
