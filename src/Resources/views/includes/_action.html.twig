@@ -91,7 +91,7 @@
             >
                 {% if action.option('icon') %}
                     {{ bootstrap_icon(action.option('icon'), {
-                        class: 'inline h-4 w-4'~(not actionLabel is empty ? ' mr-2' : '')
+                        class: 'inline h-4 w-4' ~ (not actionLabel is empty ? ' mr-2' : '')
                     }) }}
                 {% endif %}
                 <span class="2xl:block">{{ actionLabel }}</span>
@@ -142,10 +142,12 @@
                 >
                     {% if action.option('icon') %}
                         {{ bootstrap_icon(action.option('icon'), {
-                            class: 'inline h-4 w-4'~(not actionLabel is empty ? ' mr-2' : '')
+                            class: 'inline h-4 w-4' ~ (not actionLabel is empty ? ' mr-2' : '')
                         }) }}
                     {% endif %}
-                    <span class="2xl:block">{{ actionLabel }}</span>
+                    {% if actionLabel %}
+                        <span class="2xl:block">{{ actionLabel }}</span>
+                    {% endif %}
                 </button>
             </form>
         </div>
@@ -164,9 +166,13 @@
             {{ stimulus_action('araise/core-bundle/modal-form', 'openModal') }}
         >
             {% if action.option('icon') %}
-                {{ bootstrap_icon(action.icon, { class: 'inline mr-3 h-5 w-5 text-neutral-400 group-hover:text-neutral-500' }) }}
+                {{ bootstrap_icon(action.icon, {
+                    class: 'inline h-5 w-5' ~ (not action.option('label') is empty ? ' mr-2' : '')
+                }) }}
             {% endif %}
-            {{ action.option('label')|trans }}
+            {% if action.option('label') %}
+                <span class="">{{ action.option('label')|trans }}</span>
+            {% endif %}
         </button>
 
         <div
