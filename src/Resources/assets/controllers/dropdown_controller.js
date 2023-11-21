@@ -3,6 +3,9 @@ import { useClickOutside } from 'stimulus-use'
 
 export default class extends Controller {
     static targets = ['menu']
+    static values = {
+        alignment: { type: String, default: 'bottom' },
+    }
 
     connect() {
         super.connect();
@@ -40,11 +43,22 @@ export default class extends Controller {
         dropdownDiv.style.left = '';
 
         // Calculate
-        const {top, left} = dropdownDiv.getBoundingClientRect();
+        const {top, left, bottom, height} = dropdownDiv.getBoundingClientRect();
+        const windowHeight = document.body.clientHeight;
 
         // Set fixed position
         dropdownDiv.style.position = 'fixed';
-        dropdownDiv.style.top = top + 'px';
         dropdownDiv.style.left = left + 'px';
+        if(this.alignmentValue === 'bottom') {
+            let topPosition = top;
+            if(bottom > windowHeight) {
+                topPosition = windowHeight - height;
+            }
+            dropdownDiv.style.top = topPosition + 'px';
+        }
+        if(this.alignmentValue === 'top') {
+            let topPosition = top - height;
+            dropdownDiv.style.top = topPosition + 'px';
+        }
     }
 }

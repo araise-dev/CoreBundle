@@ -138,7 +138,10 @@
 }
 
 .whatwedo-crud-topbar-actions__submenu {
+    @apply w-max;
+
     & >,
+    & > [data-controller="araise--core-bundle--modal-form"] >,
     .whatwedo-core-action__confirmation > {
         .whatwedo-crud-button--action-neutral,
         .whatwedo-crud-button--action-warning,
