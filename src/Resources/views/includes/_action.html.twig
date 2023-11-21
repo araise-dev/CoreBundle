@@ -154,10 +154,13 @@
 
 {% block modal_action %}
     {# @var action \araise\CrudBundle\Action\Action #}
+    {% set attr = {
+        type: 'button',
+    }|merge(action.option('attr')|default([]))|filter((k,i) => k != 'class') %}
     <span {{ stimulus_controller('araise/core-bundle/modal-form', { formUrl: path(action.option('route'), action.option('route_parameters')) }) }}>
         <button
-            type="button"
-            class="whatwedo-crud-button--action group flex items-center px-4 py-2 ml-0"
+            class="whatwedo-crud-button--action group flex items-center px-4 py-2 ml-0 {{ action.option('attr')['class'] ?? '' }}"
+            {{ attr|map((value, attr) => "#{attr}=\"#{value}\"")|join(' ')|raw }}
             {{ stimulus_action('araise/core-bundle/modal-form', 'openModal') }}
         >
             {% if action.option('icon') %}
