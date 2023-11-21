@@ -7,3 +7,5 @@ services:
     araise\CoreBundle\:
         resource: '../../*'
 
+    araise\CoreBundle\Twig\CoreTurboExtension:
+        arguments: ["%araise_core.enable_turbo%"]
