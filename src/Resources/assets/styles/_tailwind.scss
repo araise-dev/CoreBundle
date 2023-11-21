@@ -138,6 +138,8 @@
 }
 
 .whatwedo-crud-topbar-actions__submenu {
+    @apply w-max;
+
     & >,
     .whatwedo-core-action__confirmation > {
         .whatwedo-crud-button--action-neutral,
