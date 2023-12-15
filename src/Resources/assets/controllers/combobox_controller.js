@@ -2,12 +2,11 @@ import { Controller } from '@hotwired/stimulus';
 import TomSelect from 'tom-select';
 import 'tom-select/dist/css/tom-select.css';
 
-
 export default class extends Controller {
     static values = {
         url: String,
-        required: Boolean,
-        min: 2
+        min: 2,
+        options: Object,
     }
 
     _url = null;
@@ -33,18 +32,13 @@ export default class extends Controller {
         if (this.element.tagName !== 'SELECT') {
             return;
         }
-        const settings = {
-            maxOptions: 50
-        };
+        const settings = {};
 
         settings.onItemAdd = (value) => {
             this.tomSelect.setTextboxValue('');
             this.tomSelect.refreshOptions();
         };
 
-        if (this.requiredValue === false) {
-            settings.allowEmptyOption = true;
-        }
         if (this._url !== '') {
             settings.sortField = {
                 field: "text",
@@ -70,6 +64,6 @@ export default class extends Controller {
                 return query.length >= that._min;
             }
         }
-        this.tomSelect = new TomSelect(this.element, settings);
+        this.tomSelect = new TomSelect(this.element, {...settings, ...this.optionsValue});
     }
 }
