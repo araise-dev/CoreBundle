@@ -36,6 +36,12 @@ export default class extends Controller {
         const settings = {
             maxOptions: 50
         };
+
+        settings.onItemAdd = (value) => {
+            this.tomSelect.setTextboxValue('');
+            this.tomSelect.refreshOptions();
+        };
+
         if (this.requiredValue === false) {
             settings.allowEmptyOption = true;
         }
