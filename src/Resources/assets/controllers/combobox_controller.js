@@ -5,7 +5,10 @@ import 'tom-select/dist/css/tom-select.css';
 export default class extends Controller {
     static values = {
         url: String,
-        min: 2,
+        min: {
+            type: Number,
+            default: 2
+        },
         options: Object,
     }
 
