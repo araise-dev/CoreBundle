@@ -131,6 +131,10 @@
     @apply inline-flex items-center bg-white border-neutral-300 text-neutral-700 hover:bg-neutral-100;
 }
 
+.whatwedo-crud-button--small {
+    @apply px-2 py-1;
+}
+
 .whatwedo-table-filter-amount {
     input, select {
         @extend .whatwedo-utility-input;
