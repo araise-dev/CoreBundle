@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "symfony": {
         "controllers": {
-            "select": {
-                "main": "controllers/select_controller.js",
+            "combobox": {
+                "main": "controllers/combobox_controller.js",
                 "webpackMode": "eager",
                 "fetch": "eager",
                 "enabled": true

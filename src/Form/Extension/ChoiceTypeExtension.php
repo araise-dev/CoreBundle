@@ -41,8 +41,8 @@ class ChoiceTypeExtension extends AbstractTypeExtension
      */
     public function finishView(FormView $view, FormInterface $form, array $options): void
     {
-        $view->vars['attr']['data-controller'] = 'araise--core-bundle--select';
-        $view->vars['attr']['data-araise--core-bundle--select-required-value'] = $options['required'];
+        $view->vars['attr']['data-controller'] = 'araise--core-bundle--combobox';
+        $view->vars['attr']['data-araise--combobox-bundle--select-required-value'] = $options['required'];
     }
 
     public static function getExtendedTypes(): iterable
