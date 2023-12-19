@@ -13,10 +13,9 @@ use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 
-abstract class BaseCommand extends Command implements ContainerAwareInterface
+abstract class BaseCommand extends Command
 {
     use ConsoleOutput;
-    use ContainerAwareTrait;
 
     protected ?InputInterface $input = null;
 
@@ -36,11 +35,6 @@ abstract class BaseCommand extends Command implements ContainerAwareInterface
         }
 
         return $this->registry;
-    }
-
-    public function getContainer(): ContainerInterface
-    {
-        return $this->container;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -66,13 +60,6 @@ abstract class BaseCommand extends Command implements ContainerAwareInterface
         return Command::SUCCESS;
     }
 
-    /**
-     * Get service by name.
-     */
-    protected function get(string $name): ?object
-    {
-        return $this->getContainer()->get($name);
-    }
 
     /**
      * Initialize and start stopwatch.
