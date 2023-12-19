@@ -38,8 +38,12 @@ abstract class BaseCommand extends Command implements ContainerAwareInterface
         return $this->registry;
     }
 
+    /**
+     * @deprecated
+     */
     public function getContainer(): ContainerInterface
     {
+        trigger_deprecation('araise/core-bundle', '1.0', 'Calling "%s::%s()" is deprecated, use DI', __CLASS__, __FUNCTION__);
         return $this->container;
     }
 
@@ -67,10 +71,11 @@ abstract class BaseCommand extends Command implements ContainerAwareInterface
     }
 
     /**
-     * Get service by name.
+     * @deprecated
      */
     protected function get(string $name): ?object
     {
+        trigger_deprecation('araise/core-bundle', '1.0', 'Calling "%s::%s()" is deprecated, use DI', __CLASS__, __FUNCTION__);
         return $this->getContainer()->get($name);
     }
 
