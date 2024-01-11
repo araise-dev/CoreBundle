@@ -21,6 +21,10 @@ class StringConverter
 
     private static function objectToString(object $value): string
     {
+        if ($value instanceof \BackedEnum) {
+            return $value->value;
+        }
+
         if (method_exists($value, '__toString')) {
             return $value->__toString();
         }
