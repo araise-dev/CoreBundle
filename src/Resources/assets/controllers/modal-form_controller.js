@@ -57,8 +57,11 @@ export default class extends Dropdown {
         if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
             return;
         }
-        super.toggle(event);
+        if (this.menuTarget.classList.contains('hidden')) {
+            return;
+        }
         this.modalBodyTarget.innerHTML = '';
+        super.toggle(event)
     }
 
     updateForms() {
