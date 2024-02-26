@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## v1.0.6
+ - More documentation and better styling of the documentation
+ - Deprecated methods `getContainer` and `get` of `BaseCommand`
+ - BC: Refactored Stimulus Controller `select_controller.js` to `combobox_controller.js`
+     - Use all options available in Tom Select
+ - Fixed a bug where the escape key would open an empty modal
+ - Introduced a Twig Extension: `araise_core_to_string`
+ - `\BackedEnum` are now supported in the araise `StringConverter`
+
 ## v1.0.5
  - Removed dependency to `coduo/php-to-string`
  - Added own `StringConverter`
