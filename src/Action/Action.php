@@ -109,7 +109,7 @@ class Action
      * @var array<string, mixed>
      */
     protected array $allowedTypes = [
-        self::OPT_LABEL => ['string', 'null'],
+        self::OPT_LABEL => ['string', 'boolean', 'null'],
         self::OPT_ATTR => 'array',
         self::OPT_ICON => ['string', 'null'],
         self::OPT_ROUTE => ['string', 'null'],
