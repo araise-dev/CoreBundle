@@ -8,15 +8,11 @@ use araise\CoreBundle\Command\Traits\ConsoleOutput;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 
-abstract class BaseCommand extends Command implements ContainerAwareInterface
+abstract class BaseCommand extends Command
 {
     use ConsoleOutput;
-    use ContainerAwareTrait;
 
     protected ?InputInterface $input = null;
 
@@ -27,24 +23,6 @@ abstract class BaseCommand extends Command implements ContainerAwareInterface
     public function getInput(): ?InputInterface
     {
         return $this->input;
-    }
-
-    public function getDoctrine(): ?object
-    {
-        if ($this->registry === null) {
-            $this->registry = $this->get('doctrine');
-        }
-
-        return $this->registry;
-    }
-
-    /**
-     * @deprecated
-     */
-    public function getContainer(): ContainerInterface
-    {
-        trigger_deprecation('araise/core-bundle', '1.0', 'Calling "%s::%s()" is deprecated, use DI', __CLASS__, __FUNCTION__);
-        return $this->container;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -68,15 +46,6 @@ abstract class BaseCommand extends Command implements ContainerAwareInterface
         $this->debug('Options: '.var_export($input->getOptions(), true));
 
         return Command::SUCCESS;
-    }
-
-    /**
-     * @deprecated
-     */
-    protected function get(string $name): ?object
-    {
-        trigger_deprecation('araise/core-bundle', '1.0', 'Calling "%s::%s()" is deprecated, use DI', __CLASS__, __FUNCTION__);
-        return $this->getContainer()->get($name);
     }
 
     /**
