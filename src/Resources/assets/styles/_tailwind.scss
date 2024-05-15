@@ -39,6 +39,14 @@
     .whatwedo-utility-link {
         @extend .whatwedo-utility-heading-4;
         @apply text-primary-500;
+        text-decoration: underline solid transparent;
+        text-underline-offset: 0.2em;
+        text-decoration-thickness: 2px;
+        transition: text-decoration 1s ease;
+
+        &:hover {
+            text-decoration-color: currentColor;
+        }
     }
 
     .whatwedo-utility-button {
