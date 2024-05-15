@@ -22,6 +22,7 @@ export default class extends Controller {
             element: this.element,
             css: easepickStyle,
             lang: this.langValue || 'de-DE',
+            format: enableTime ? "YYYY-MM-DDTHH:mm" : "YYYY-MM-DD",
             readonly: false,
             plugins: plugins,
             calendars: type === 'time' ? 0 : 1,
