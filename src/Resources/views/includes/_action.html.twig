@@ -214,3 +214,31 @@
         </div>
     </span>
 {% endblock %}
+
+{% block dropdown_action %}
+    <div
+        {{ stimulus_controller('araise/core-bundle/dropdown') }}
+        class="whatwedo-crud-topbar-actions relative"
+    >
+        <button
+            class="whatwedo-crud-button--action-neutral"
+            {{ stimulus_action('araise/core-bundle/dropdown', 'toggle') }}
+        >
+            {{ bootstrap_icon(action.option('icon'), {
+                class: 'inline mr-2 h-4 w-4'
+            }) }}
+            <span class="2xl:block">{{ action.option('label')|trans }}</span>
+        </button>
+
+        <div
+            class="whatwedo-crud-topbar-actions__submenu hidden absolute right-0 top-full flex flex-col mt-2 bg-white py-1 rounded-md shadow-lg z-10"
+            {{ stimulus_target('araise/core-bundle/dropdown', 'menu') }}
+        >
+            {% for action in action.option('actions') %}
+                {% with {'action': action} %}
+                    {{ block('action') }}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
