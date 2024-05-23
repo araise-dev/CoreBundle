@@ -21,6 +21,7 @@ export default class extends Controller {
 
         const dropdownDiv = this.menuTarget;
         if (this.hasMenuTarget && dropdownDiv.classList.contains('hidden')) {
+            window.dispatchEvent(new Event('araise-dropdown:open'));
             dropdownDiv.classList.remove('hidden');
         } else {
             dropdownDiv.classList.add('hidden');
