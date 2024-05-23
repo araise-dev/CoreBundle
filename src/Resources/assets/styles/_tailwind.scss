@@ -66,6 +66,31 @@
         @apply text-neutral-500;
     }
 
+    // Badges
+    .whatwedo-utility-badge {
+        @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-primary-500 text-white;
+
+        &--success {
+            @apply bg-success-500;
+        }
+
+        &--warning {
+            @apply bg-warning-500;
+        }
+
+        &--error {
+            @apply bg-error-500;
+        }
+
+        &--neutral {
+            @apply bg-neutral-500;
+        }
+
+        &--primary {
+            @apply bg-primary-500;
+        }
+    }
+
     // Topbar
     .whatwedo-utility-topbar {
         @apply flex flex-grow-0 flex-auto px-4 py-2 md:py-4 md:min-h-[71px] justify-end items-center lg:justify-between;
