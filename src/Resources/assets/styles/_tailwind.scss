@@ -36,13 +36,26 @@
         @apply text-base font-semibold text-neutral-500;
     }
 
+    .whatwedo-utility-content {
+        @extend .whatwedo-utility-paragraph;
+
+        a {
+            text-decoration: underline solid currentColor;
+            text-underline-offset: 0.2em;
+            text-decoration-thickness: 1px;
+
+            &:hover {
+                @apply text-neutral-900;
+            }
+        }
+    }
+
     .whatwedo-utility-link {
         @extend .whatwedo-utility-heading-4;
-        @apply text-primary-500;
         text-decoration: underline solid transparent;
         text-underline-offset: 0.2em;
-        text-decoration-thickness: 2px;
-        transition: text-decoration 1s ease;
+        text-decoration-thickness: 1px;
+        transition: text-decoration 0.2s ease;
 
         &:hover {
             text-decoration-color: currentColor;
