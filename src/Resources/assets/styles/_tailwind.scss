@@ -129,6 +129,10 @@
     min-height: 2.2rem;
 }
 
+.whatwedo_core-checkbox {
+    @apply text-primary-500 focus:ring-1 focus:ring-primary-500 rounded cursor-pointer;
+}
+
 .whatwedo_core-input--rounded-left {
     @extend .whatwedo_core-input;
     @apply rounded-none rounded-l-md;
