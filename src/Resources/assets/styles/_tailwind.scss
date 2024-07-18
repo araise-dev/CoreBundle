@@ -61,6 +61,10 @@
         @apply focus:ring-error-300 focus:border-error-300 border-error-500;
     }
 
+    .whatwedo-utility-error-container {
+        @apply my-2;
+    }
+
     .whatwedo-utility-label {
         @extend .whatwedo-utility-bold;
         @apply text-neutral-500;
