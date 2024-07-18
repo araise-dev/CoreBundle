@@ -1,0 +1,18 @@
+{% set classes = [] %}
+{% if background_color_hex|default %}
+    {% set classes = classes|merge(["bg-[#{background_color_hex}]"]) %}
+{% endif %}
+
+{% if background_color_class|default %}
+    {% set classes = classes|merge([background_color_class]) %}
+{% endif %}
+
+{% if link != '' %}
+    <a href="{{ link }}" class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--{{ type }} {{ classes|join(' ') }}">
+        {{ value }}
+    </a>
+{% else %}
+    <p class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--{{ type }} {{ classes|join(' ') }}">
+        {{ value }}
+    </p>
+{% endif %}
