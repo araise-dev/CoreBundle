@@ -15,6 +15,12 @@
                 "fetch": "eager",
                 "enabled": true
             },
+            "input-mask": {
+                "main": "controllers/input-mask_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true
+            },
             "dropdown": {
                 "main": "controllers/dropdown_controller.js",
                 "webpackMode": "eager",
@@ -51,6 +57,7 @@
     "dependencies": {
         "@easepick/bundle": "^1.2.1",
         "flatpickr": "^4.6.9",
+        "imask": "^7.6.1",
         "raw-loader": "^4.0.2",
         "stimulus-dropdown": "^2.0.0",
         "stimulus-use": "^0.51.1",
