@@ -17,8 +17,6 @@ export default class extends Controller {
     }
 
     toggle (event) {
-        event.stopPropagation();
-
         const dropdownDiv = this.menuTarget;
         if (this.hasMenuTarget && dropdownDiv.classList.contains('hidden')) {
             window.dispatchEvent(new Event('araise-dropdown:open'));
