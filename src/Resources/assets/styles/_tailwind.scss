@@ -139,6 +139,11 @@
     @apply inline-flex items-center bg-primary-500 hover:bg-primary-700;
 }
 
+.whatwedo-crud-button--rounded {
+    @extend .whatwedo-utility-button;
+    @apply rounded-full p-1;
+}
+
 .whatwedo-crud-button--action-danger {
     @extend .whatwedo-utility-button;
     @apply inline-flex items-center bg-error-500 hover:bg-red-700;
