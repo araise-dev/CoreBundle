@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import IMask from "imask"
 
 const typeMapping = {
     'Number': Number,
@@ -12,7 +11,8 @@ export default class extends Controller {
         thousandsSeparator: { type: String, default: '\'' },
         normalizeZeros: { type: Boolean, default: false },
     };
-    connect() {
+    async connect() {
+        const { default: IMask } = await import('imask');
         this.mask = IMask(this.element, {
             mask: typeMapping[this.maskValue] || this.maskValue,
             scale: this.scaleValue,
