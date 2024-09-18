@@ -52,6 +52,7 @@
 
     .whatwedo-utility-link {
         @extend .whatwedo-utility-heading-4;
+        @apply text-neutral-800;
         text-decoration: underline solid transparent;
         text-underline-offset: 0.2em;
         text-decoration-thickness: 1px;
