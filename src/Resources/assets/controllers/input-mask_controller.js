@@ -8,7 +8,7 @@ export default class extends Controller {
         mask: String,
         scale: { type: Number, default: 2 },
         radix: { type: String, default: '.' },
-        thousandsSeparator: { type: String, default: '' },
+        thousandsSeparator: { type: String, default: '\'' },
         normalizeZeros: { type: Boolean, default: false },
     };
     async connect() {
