@@ -10,6 +10,8 @@ export default class extends Controller {
         radix: { type: String, default: '.' },
         thousandsSeparator: { type: String, default: '\'' },
         normalizeZeros: { type: Boolean, default: false },
+        min: Number,
+        max: Number,
     };
     async connect() {
         const { default: IMask } = await import('imask');
@@ -19,6 +21,8 @@ export default class extends Controller {
             radix: this.radixValue,
             thousandsSeparator: this.thousandsSeparatorValue,
             normalizeZeros: this.normalizeZerosValue,
+            min: this.hasMinValue ? this.minValue : null,
+            max: this.hasMaxValue ? this.maxValue : null,
         });
     }
     disconnect() {
