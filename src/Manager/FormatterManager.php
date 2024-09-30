@@ -30,7 +30,7 @@ declare(strict_types=1);
 namespace araise\CoreBundle\Manager;
 
 use araise\CoreBundle\Formatter\FormatterInterface;
-use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
+use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 
 class FormatterManager
 {
@@ -43,7 +43,7 @@ class FormatterManager
      * @param FormatterInterface[] $formatters
      */
     public function __construct(
-        #[AutowireIterator('araise_core.formatter')] iterable $formatters
+        #[TaggedIterator('araise_core.formatter')] iterable $formatters
     ) {
         foreach ($formatters as $formatter) {
             $this->formatters[$formatter::class] = $formatter;
