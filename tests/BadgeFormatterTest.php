@@ -14,7 +14,7 @@ class BadgeFormatterTest extends AbstractFormatterTest
         ]);
         $html = $badgeFormatter->getHtml('test');
 
-        $expected = '<p class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--error ">
+        $expected = '<p class="whatwedo-utility-badge inline-block whatwedo-utility-badge--error ">
         test
     </p>';
 
@@ -30,7 +30,7 @@ class BadgeFormatterTest extends AbstractFormatterTest
         ]);
         $html = $badgeFormatter->getHtml('test');
 
-        $expected = '<a href="https://www.whatwedo.ch" class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--error ">
+        $expected = '<a href="https://www.whatwedo.ch" class="whatwedo-utility-badge inline-block whatwedo-utility-badge--error ">
         test
     </a>';
 
@@ -46,7 +46,7 @@ class BadgeFormatterTest extends AbstractFormatterTest
         ]);
         $html = $badgeFormatter->getHtml('test');
 
-        $expected = '<p class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--error bg-red-500">
+        $expected = '<p class="whatwedo-utility-badge inline-block whatwedo-utility-badge--error bg-red-500">
         test
     </p>';
 
@@ -62,7 +62,7 @@ class BadgeFormatterTest extends AbstractFormatterTest
         ]);
         $html = $badgeFormatter->getHtml('test');
 
-        $expected = '<p class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--error bg-[#ff0000]">
+        $expected = '<p class="whatwedo-utility-badge inline-block whatwedo-utility-badge--error bg-[#ff0000]">
         test
     </p>';
 
@@ -79,7 +79,7 @@ class BadgeFormatterTest extends AbstractFormatterTest
         ]);
         $html = $badgeFormatter->getHtml('test');
 
-        $expected = '<p class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--error bg-[#ff0000] bg-red-500">
+        $expected = '<p class="whatwedo-utility-badge inline-block whatwedo-utility-badge--error bg-[#ff0000] bg-red-500">
         test
     </p>';
 

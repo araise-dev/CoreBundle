@@ -8,11 +8,11 @@
 {% endif %}
 
 {% if link != '' %}
-    <a href="{{ link }}" class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--{{ type }} {{ classes|join(' ') }}">
+    <a href="{{ link }}" class="whatwedo-utility-badge inline-block whatwedo-utility-badge--{{ type }} {{ classes|join(' ') }}">
         {{ value }}
     </a>
 {% else %}
-    <p class="whatwedo-utility-badge inline-block .whatwedo-utility-badge--{{ type }} {{ classes|join(' ') }}">
+    <p class="whatwedo-utility-badge inline-block whatwedo-utility-badge--{{ type }} {{ classes|join(' ') }}">
         {{ value }}
     </p>
 {% endif %}
