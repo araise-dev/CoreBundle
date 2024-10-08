@@ -36,9 +36,31 @@
         @apply text-base font-semibold text-neutral-500;
     }
 
+    .whatwedo-utility-content {
+        @extend .whatwedo-utility-paragraph;
+
+        a {
+            text-decoration: underline solid currentColor;
+            text-underline-offset: 0.2em;
+            text-decoration-thickness: 1px;
+
+            &:hover {
+                @apply text-neutral-900;
+            }
+        }
+    }
+
     .whatwedo-utility-link {
         @extend .whatwedo-utility-heading-4;
         @apply text-neutral-800;
+        text-decoration: underline solid transparent;
+        text-underline-offset: 0.2em;
+        text-decoration-thickness: 1px;
+        transition: text-decoration 0.2s ease;
+
+        &:hover {
+            text-decoration-color: currentColor;
+        }
     }
 
     .whatwedo-utility-button {
@@ -56,6 +78,31 @@
     .whatwedo-utility-label {
         @extend .whatwedo-utility-bold;
         @apply text-neutral-500;
+    }
+
+    // Badges
+    .whatwedo-utility-badge {
+        @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-primary-500 text-white;
+
+        &--success {
+            @apply bg-success-500;
+        }
+
+        &--warning {
+            @apply bg-warning-500;
+        }
+
+        &--error {
+            @apply bg-error-500;
+        }
+
+        &--neutral {
+            @apply bg-neutral-500;
+        }
+
+        &--primary {
+            @apply bg-primary-500;
+        }
     }
 
     // Topbar
@@ -96,6 +143,10 @@
     min-height: 2.2rem;
 }
 
+.whatwedo_core-checkbox {
+    @apply text-primary-500 focus:ring-1 focus:ring-primary-500 rounded cursor-pointer;
+}
+
 .whatwedo_core-input--rounded-left {
     @extend .whatwedo_core-input;
     @apply rounded-none rounded-l-md;
@@ -104,6 +155,11 @@
 .whatwedo-crud-button--action {
     @extend .whatwedo-utility-button;
     @apply inline-flex items-center bg-primary-500 hover:bg-primary-700;
+}
+
+.whatwedo-crud-button--rounded {
+    @extend .whatwedo-utility-button;
+    @apply rounded-full p-1;
 }
 
 .whatwedo-crud-button--action-danger {

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.2.0
+ - Removed symfony ^5.4 support
+ - Introduced `FlashBagExecption` to handle flash messages in a more flexible way
+ - Introduced `BadgeFormatter` to display badges in a standardized way
+ - Improved `datetime_controller.js` to handle more date formats
+ - Introduced `input-mask_controller.js` to handle input masks like Money or Security-Numbers
+
 ## v1.0.6
  - More documentation and better styling of the documentation
  - Deprecated methods `getContainer` and `get` of `BaseCommand`

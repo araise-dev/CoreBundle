@@ -6,13 +6,19 @@
             "combobox": {
                 "main": "controllers/combobox_controller.js",
                 "webpackMode": "eager",
-                "fetch": "eager",
+                "fetch": "lazy",
                 "enabled": true
             },
             "datetime": {
                 "main": "controllers/datetime_controller.js",
                 "webpackMode": "eager",
-                "fetch": "eager",
+                "fetch": "lazy",
+                "enabled": true
+            },
+            "input-mask": {
+                "main": "controllers/input-mask_controller.js",
+                "webpackMode": "eager",
+                "fetch": "lazy",
                 "enabled": true
             },
             "dropdown": {
@@ -24,7 +30,7 @@
             "modal-form": {
                 "main": "controllers/modal-form_controller.js",
                 "webpackMode": "eager",
-                "fetch": "eager",
+                "fetch": "lazy",
                 "enabled": true
             },
             "reload-content": {
@@ -36,7 +42,7 @@
             "modal": {
                 "main": "controllers/modal_controller.js",
                 "webpackMode": "eager",
-                "fetch": "eager",
+                "fetch": "lazy",
                 "enabled": true
             }
         }
@@ -51,6 +57,7 @@
     "dependencies": {
         "@easepick/bundle": "^1.2.1",
         "flatpickr": "^4.6.9",
+        "imask": "^7.6.1",
         "raw-loader": "^4.0.2",
         "stimulus-dropdown": "^2.0.0",
         "stimulus-use": "^0.51.1",
