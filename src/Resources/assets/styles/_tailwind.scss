@@ -83,6 +83,7 @@
     // Badges
     .whatwedo-utility-badge {
         @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium bg-primary-500 text-white;
+        text-wrap: nowrap;
 
         &--success {
             @apply bg-success-500;
@@ -102,6 +103,19 @@
 
         &--primary {
             @apply bg-primary-500;
+        }
+    }
+
+    .whatwedo-utility-button-badge {
+        @apply inline-flex items-center rounded-full px-2 py-0.5 ml-2 text-xs font-medium bg-primary-500 text-white;
+        text-wrap: nowrap;
+
+        &--primary {
+            @apply bg-primary-500 text-white;
+        }
+
+        &--white {
+            @apply bg-white text-primary-500;
         }
     }
 
@@ -211,6 +225,10 @@
             @apply h-auto shadow-none border-none rounded-none px-3 m-0 w-full;
             @apply text-neutral-700 bg-transparent hover:bg-neutral-200 font-semibold;
         }
+    }
+
+    .whatwedo-utility-button-badge--white {
+        @extend .whatwedo-utility-button-badge--primary;
     }
 }
 

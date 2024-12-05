@@ -65,7 +65,12 @@
                     class: 'inline h-4 w-4'~(not actionLabel is empty ? ' mr-2' : '')
                 }) }}
             {% endif %}
-            <span class="2xl:block">{{ actionLabel }}</span>
+            <span class="2xl:block">
+                {{ actionLabel }}
+                {% if action.option('attr')['count'] is defined %}
+                    <span class="whatwedo-utility-button-badge whatwedo-utility-button-badge--white">{{ action.option('attr')['count'] }}</span>
+                {% endif %}
+            </span>
         </a>
     {% endif %}
 {% endblock %}
