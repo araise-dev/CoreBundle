@@ -105,6 +105,18 @@
         }
     }
 
+    .whatwedo-utility-button-badge {
+        @apply inline-flex items-center rounded-full px-2 py-0.5 ml-2 text-xs font-medium bg-primary-500 text-white;
+
+        &--primary {
+            @apply bg-primary-500 text-white;
+        }
+
+        &--white {
+            @apply bg-white text-primary-500;
+        }
+    }
+
     // Topbar
     .whatwedo-utility-topbar {
         @apply flex flex-grow-0 flex-auto px-4 py-2 md:py-4 md:min-h-[71px] justify-end items-center lg:justify-between;
@@ -211,6 +223,10 @@
             @apply h-auto shadow-none border-none rounded-none px-3 m-0 w-full;
             @apply text-neutral-700 bg-transparent hover:bg-neutral-200 font-semibold;
         }
+    }
+
+    .whatwedo-utility-button-badge--white {
+        @extend .whatwedo-utility-button-badge--primary;
     }
 }
 
