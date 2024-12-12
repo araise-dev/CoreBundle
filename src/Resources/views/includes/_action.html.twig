@@ -241,7 +241,7 @@
         >
             {% for action in action.option('actions') %}
                 {% with {'action': action} %}
-                    {{ block('action') }}
+                    {{ block(action.getOption('block_prefix')) }}
                 {% endwith %}
             {% endfor %}
         </div>
