@@ -176,6 +176,7 @@
     @apply rounded-full p-1;
 }
 
+.whatwedo-crud-button--action-delete,
 .whatwedo-crud-button--action-danger {
     @extend .whatwedo-utility-button;
     @apply inline-flex items-center bg-error-500 hover:bg-red-700;
@@ -217,6 +218,7 @@
     & >,
     & > [data-controller="araise--core-bundle--modal-form"] >,
     .whatwedo-core-action__confirmation > {
+        .whatwedo-crud-button--action-delete,
         .whatwedo-crud-button--action-neutral,
         .whatwedo-crud-button--action-warning,
         .whatwedo-crud-button--action-danger,
