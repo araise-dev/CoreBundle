@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\BooleanFormatter;
 
-class BooleanFormatterTest extends AbstractFormatterTest
+class BooleanFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

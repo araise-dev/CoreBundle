@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\CollectionFormatter;
 
-class CollectionFormatterTest extends AbstractFormatterTest
+class CollectionFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

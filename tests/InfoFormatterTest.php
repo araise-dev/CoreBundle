@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\InfoFormatter;
 
-class InfoFormatterTest extends AbstractFormatterTest
+class InfoFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

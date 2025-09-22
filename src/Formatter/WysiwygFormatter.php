@@ -29,6 +29,8 @@ declare(strict_types=1);
 
 namespace araise\CoreBundle\Formatter;
 
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
 class WysiwygFormatter extends AbstractFormatter
 {
     public function getString(mixed $value): string
@@ -41,5 +43,11 @@ class WysiwygFormatter extends AbstractFormatter
         $value = trim(strip_tags($value, '<p><b><strong><ul><li><i><u><a><br><small>'));
 
         return $value ? sprintf('<blockquote>%s</blockquote>', $value) : '';
+    }
+
+    protected function configureOptions(OptionsResolver $resolver): void
+    {
+        parent::configureOptions($resolver);
+        $resolver->setDefault(self::OPT_HTML_SAFE, true);
     }
 }

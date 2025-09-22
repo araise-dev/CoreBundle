@@ -4,7 +4,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\BadgeFormatter;
 
-class BadgeFormatterTest extends AbstractFormatterTest
+class BadgeFormatterTest extends AbstractFormatterTestBase
 {
     public function testGetHtml(): void
     {

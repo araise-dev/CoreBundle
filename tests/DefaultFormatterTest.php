@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\DefaultFormatter;
 
-class DefaultFormatterTest extends AbstractFormatterTest
+class DefaultFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

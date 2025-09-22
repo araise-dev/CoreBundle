@@ -35,6 +35,6 @@ phpstan:
 
 ## PHP Unit tests
 phpunit:
-	vendor/bin/simple-phpunit
+	vendor/bin/phpunit
 
 

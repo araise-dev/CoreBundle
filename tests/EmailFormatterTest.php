@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\EmailFormatter;
 
-class EmailFormatterTest extends AbstractFormatterTest
+class EmailFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

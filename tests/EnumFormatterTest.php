@@ -7,7 +7,7 @@ namespace araise\CoreBundle\Tests;
 use araise\CoreBundle\Formatter\EnumFormatter;
 use araise\CoreBundle\Tests\App\Enum\TestEnum;
 
-class EnumFormatterTest extends AbstractFormatterTest
+class EnumFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

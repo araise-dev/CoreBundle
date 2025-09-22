@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\DateTimeFormatter;
 
-class DateTimeFormatterTest extends AbstractFormatterTest
+class DateTimeFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

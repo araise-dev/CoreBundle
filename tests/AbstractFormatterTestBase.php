@@ -8,7 +8,7 @@ use araise\CoreBundle\Formatter\FormatterInterface;
 use araise\CoreBundle\Manager\FormatterManager;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
-abstract class AbstractFormatterTest extends KernelTestCase
+abstract class AbstractFormatterTestBase extends KernelTestCase
 {
     protected function getFormatter(string $formatterClass): FormatterInterface
     {

@@ -1,8 +1,7 @@
 <?php
 
-declare(strict_types=1);
 /*
- * Copyright (c) 2021, whatwedo GmbH
+ * Copyright (c) 2025, whatwedo GmbH
  * All rights reserved
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,36 +26,43 @@ declare(strict_types=1);
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace araise\CoreBundle\Formatter;
+namespace araise\CoreBundle\Twig;
 
-use Symfony\Component\OptionsResolver\OptionsResolver;
-use Twig\Environment;
+use araise\CoreBundle\Manager\FormatterManager;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class TwigFormatter extends AbstractFormatter
+class CoreExtension extends AbstractExtension
 {
-    public const OPT_TEMPLATE = 'template';
-
     public function __construct(
-        protected Environment $twig
+        private FormatterManager $formatterManager
     ) {
     }
 
-    public function getString(mixed $value): string
+    public function getFunctions(): array
     {
-        return $value;
+        return [
+            new TwigFunction(
+                'wwd_is_html_safe',
+                $this->isHtmlSafe(...)
+            ),
+        ];
     }
 
-    public function getHtml(mixed $value): string
+    public function isHtmlSafe(mixed $object): bool
     {
-        return $this->twig->render($this->options[self::OPT_TEMPLATE], [
-            'value' => $value,
-        ]);
-    }
+        if (!method_exists($object, 'getOption')) {
+            return false;
+        }
+        $formatter = $object->getOption('formatter');
+        $formatterOptions = $object->getOption('formatter_options');
 
-    protected function configureOptions(OptionsResolver $resolver): void
-    {
-        $resolver->setRequired(self::OPT_TEMPLATE);
-        $resolver->setAllowedTypes(self::OPT_TEMPLATE, 'string');
-        $resolver->setDefault(self::OPT_HTML_SAFE, true);
+        if (is_string($formatter)) {
+            $formatterObj = $this->formatterManager->getFormatter($formatter);
+            $formatterObj->processOptions($formatterOptions);
+            return $formatterObj->isHtmlSafe();
+        }
+
+        return false;
     }
 }
