@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\WysiwygFormatter;
 
-class WysiwygFormatterTest extends AbstractFormatterTest
+class WysiwygFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

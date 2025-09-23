@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\Nl2brFormatter;
 
-class Nl2brFormatterTest extends AbstractFormatterTest
+class Nl2brFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

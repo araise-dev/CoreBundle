@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\MoneyFormatter;
 
-class MoneyFormatterTest extends AbstractFormatterTest
+class MoneyFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

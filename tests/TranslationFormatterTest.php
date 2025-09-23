@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\TranslationFormatter;
 
-class TranslationFormatterTest extends AbstractFormatterTest
+class TranslationFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

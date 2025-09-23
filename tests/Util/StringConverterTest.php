@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace araise\CoreBundle\Tests\Util;
 
 use araise\CoreBundle\Util\StringConverter;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class StringConverterTest extends KernelTestCase
 {
-    /**
-     * @dataProvider dataProvider
-     */
+    #[DataProvider('dataProvider')]
     public function testString(mixed $input, string $expected): void
     {
         $output = StringConverter::toString($input);
@@ -23,7 +22,7 @@ class StringConverterTest extends KernelTestCase
     /**
      * @return array<string, array<string, mixed>>
      */
-    public function dataProvider(): array
+    public static function dataProvider(): array
     {
         $objectPlain = new \stdClass();
         $objectStringify = new class() {

@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\PercentageFormatter;
 
-class PercentageFormatterTest extends AbstractFormatterTest
+class PercentageFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

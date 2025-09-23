@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\CountryAlpha2Formatter;
 
-class CountryAlpha2FormatterTest extends AbstractFormatterTest
+class CountryAlpha2FormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

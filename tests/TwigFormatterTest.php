@@ -6,7 +6,7 @@ namespace araise\CoreBundle\Tests;
 
 use araise\CoreBundle\Formatter\TwigFormatter;
 
-class TwigFormatterTest extends AbstractFormatterTest
+class TwigFormatterTest extends AbstractFormatterTestBase
 {
     public function testFormatter(): void
     {

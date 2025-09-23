@@ -26,7 +26,7 @@ class BadgeFormatter extends TwigFormatter
     {
         $this->processOptions(($this->options[self::OPT_CONFIGURATION])($value, $this->options));
         return $this->twig->render($this->options[self::OPT_TEMPLATE], [
-            'value' => $this->getString($value),
+            'value' => $this->escapeHTML($this->getString($value)),
             'type' => $this->options[self::OPT_TYPE],
             'background_color_class' => $this->options[self::OPT_BACKGROUND_COLOR_CLASS],
             'background_color_hex' => $this->options[self::OPT_BACKGROUND_COLOR_HEX],
@@ -43,6 +43,7 @@ class BadgeFormatter extends TwigFormatter
             self::OPT_TYPE => 'neutral',
             self::OPT_LINK => null,
             self::OPT_CONFIGURATION => static fn (mixed $value, array $options): array => $options,
+            self::OPT_HTML_SAFE => true,
         ]);
         $resolver->setAllowedTypes(self::OPT_BACKGROUND_COLOR_CLASS, ['string', 'null']);
         $resolver->setAllowedTypes(self::OPT_BACKGROUND_COLOR_HEX, ['string', 'null']);
