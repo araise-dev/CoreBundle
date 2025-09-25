@@ -22,7 +22,7 @@ abstract class AbstractFormatter implements FormatterInterface
 
     public function getHtml(mixed $value): string
     {
-        return $this->getString($value);
+        return $this->escapeHTML($this->getString($value));
     }
 
     /**
